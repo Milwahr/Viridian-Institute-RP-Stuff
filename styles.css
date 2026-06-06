@@ -172,6 +172,33 @@ body::after {
   white-space: pre-wrap;
 }
 
+.question-quote {
+  margin: 12px 0 0 0.5rem;
+  padding: 14px 18px;
+  border-left: 3px solid rgba(124, 233, 255, 0.45);
+  background: rgba(6, 10, 18, 0.95);
+  border-radius: 16px;
+}
+
+.question-list {
+  margin: 12px 0 0 1.25rem;
+  padding-left: 1rem;
+  color: #c2d6ff;
+  line-height: 1.6;
+}
+
+.question-list li {
+  margin-bottom: 0.65rem;
+}
+
+.question-block.hidden {
+  display: none;
+}
+
+.final-question.hidden {
+  display: none;
+}
+
 .answer-input {
   width: 100%;
   min-height: 56px;
@@ -235,9 +262,13 @@ body::after {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  justify-content: space-between;
+  justify-content: flex-start;
   color: #9badcf;
   font-size: 0.88rem;
+}
+
+.panel-footer .link-status {
+  margin-left: auto;
 }
 
 .panel-footer span {
@@ -248,6 +279,78 @@ body::after {
   border-radius: 999px;
   background: rgba(11, 15, 26, 0.82);
   border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.link-status {
+  background: rgba(204, 84, 92, 0.18);
+  color: #ff8a91;
+  border-color: rgba(255, 138, 145, 0.35);
+}
+
+.link-status.pending {
+  background: rgba(241, 209, 88, 0.18);
+  color: #ffee8a;
+  border-color: rgba(246, 225, 127, 0.35);
+}
+
+.link-status.secured {
+  background: rgba(62, 240, 178, 0.18);
+  color: #8df3c9;
+  border-color: rgba(62, 240, 178, 0.35);
+}
+
+.return-button,
+.final-question-button {
+  background: rgba(124, 233, 255, 0.16);
+  color: #d6eaff;
+  border: 1px solid rgba(124, 233, 255, 0.34);
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: background 180ms ease, transform 180ms ease;
+}
+
+.return-button:hover,
+.final-question-button:hover {
+  background: rgba(124, 233, 255, 0.24);
+  transform: translateY(-1px);
+}
+
+.return-button.hidden,
+.final-question-button.hidden {
+  display: none;
+}
+
+.return-button:hover {
+  background: rgba(124, 233, 255, 0.24);
+  transform: translateY(-1px);
+}
+
+.return-button.hidden {
+  display: none;
+}
+
+.final-status {
+  display: block;
+  margin-top: 14px;
+  padding: 12px 16px;
+  color: #99f3aa;
+  background: rgba(42, 172, 110, 0.14);
+  border: 1px solid rgba(55, 215, 139, 0.24);
+  border-radius: 16px;
+  font-weight: 700;
+}
+
+.final-status.hidden {
+  display: none;
+}
+
+.input-sequence.complete {
+  color: #8df3c9;
+}
+  border-color: rgba(69, 225, 171, 0.35);
 }
 
 @media (max-width: 560px) {
