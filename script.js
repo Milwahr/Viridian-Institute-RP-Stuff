@@ -38,7 +38,7 @@ function refreshSequenceCount() {
     questionBlocks.forEach((block) => block.classList.toggle('hidden', finalQuestionVisible));
     finalQuestion.classList.toggle('hidden', !finalQuestionVisible);
     returnButton?.classList.toggle('hidden', !finalQuestionVisible);
-    finalQuestionButton?.classList.toggle('hidden', !(isComplete && !finalQuestionVisible));
+    finalQuestionButton?.classList.toggle('hidden', correctCount !== totalQuestions || finalQuestionVisible);
   }
 }
 
