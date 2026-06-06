@@ -165,6 +165,13 @@ body::after {
   letter-spacing: 0.12em;
 }
 
+.question-text {
+  margin: 0;
+  color: #a9c9ff;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
 .answer-input {
   width: 100%;
   min-height: 56px;
